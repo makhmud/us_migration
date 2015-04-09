@@ -144,10 +144,8 @@ ul{
 
 #replies{
     font-style: italic;
-    height: 617px;
-    background: url(../images/city2.jpg) center top no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
+    min-height: 617px;
+    background: url(../images/city2.jpg) center top repeat-y;
     text-align: center;
     padding: 44px 0;
 }
@@ -165,6 +163,10 @@ ul{
     display: inline-block;
     color: #151515;
 }
+#replies .more:before{
+    content: '';
+    display: block;
+}
 #replies .inner .reply{
     width: 648px;
     display: inline-block;
@@ -179,6 +181,18 @@ ul{
     border-radius: 84px;
     overflow: hidden;
     margin-right: 20px;
+    width: 169px;
+    height: 169px;
+}
+#replies .reply .content{
+    display: inline-block;
+    width: 400px;
+    overflow: hidden;
+    max-height: 90px;
+    transition:max-height 100ms linear;
+}
+#replies .reply .content.opened{
+    max-height: 1000px;
 }
 .more-replies{
     background: url(../images/big-more.png) no-repeat;

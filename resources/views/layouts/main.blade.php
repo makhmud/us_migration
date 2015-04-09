@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/style.css"/>
     <script src="/js/jquery-1.11.2.min.js"></script>
     <script src="/js/lightbox.min.js"></script>
+    <script src="/js/main.js"></script>
 </head>
 <body>
 <header class="container">

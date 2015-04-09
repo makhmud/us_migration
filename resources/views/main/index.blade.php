@@ -50,5 +50,5 @@
     </div>
     </div>
 
-    @include('main.replies')
+
 @stop

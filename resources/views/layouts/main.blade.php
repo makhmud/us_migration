@@ -41,6 +41,7 @@
     </ul>
 </nav>
     @yield('content')
+@include('main.replies')
 <footer class="container">
     <div class="inner">
         <p class="pull-left">© 2015 - us-immigration.ua <br/>

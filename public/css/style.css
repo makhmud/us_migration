@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "Lobster";
+    src: url("../fonts/Lobster.ttf");
+    src: url("../fonts/Lobster.ttf?#iefix") format("embedded-opentype"), url("../fonts/Lobster.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+body{
+    font-family: Arial;
+    font-size: 16px;
+    color: #151515;
+}
+h1{
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.container{
+    width: 100%;
+}
+.container > .inner{
+    margin: auto;
+    width: 960px;
+}
+header{
+    height: 527px;
+    background: url(../images/city1.jpg) no-repeat center top;
+    position: relative;
+    margin-bottom: 100px;
+}
+header .inner{
+    text-align: center;
+    position: relative;
+    height: 100%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-menu{
+    background: #151515;
+    display: inline-block;
+    line-height: 72px;
+    padding: 0 36px;
+    border-radius: 36px;
+    margin: -136px auto auto;
+    position: relative;
+}
+#main-menu a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 28px;
+}
+#main-menu li{
+    display: inline-block;
+    font-family: 'Lobster';
+    padding: 0 20px;
+    position: relative;
+}
+
+#top{
+    font-family: 'Lobster';
+}
+#logo{
+    clear: both;
+}
+#logo img{
+    margin-left: -190px;
+}
+#lang{
+    font-size: 26px;
+    text-align: left;
+    float: left;
+}
+#lang a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#contacts{
+    float: right;
+    font-size: 32px;
+    text-align: right;
+}
+#contacts > *{
+    height: 26px;
+    padding-left: 40px;
+    background: url(../images/contact-icons.png) no-repeat;
+    line-height: 26px;
+    display: inline-block;
+}
+#contacts .skype{
+    background-position: 0 -26px;
+}
+.show{
+    border-radius: 125px;
+    overflow: hidden;
+    position: relative;
+}
+.show a{
+    transition: opacity 100ms linear;
+    opacity: 0;
+    font-family: 'Lobster';
+    font-size: 28px;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    line-height: 200px;
+    text-decoration: none;
+    color: #151515;
+    text-align: center;
+    background: url(../images/looking-glass.png) center 122px no-repeat rgba(255, 255, 255, 0.4);
+}
+.show:hover a{
+    opacity: 1;
+}
+.show.pull-left{
+    margin-right: 34px;
+}
+.show.pull-right{
+    margin-left: 34px;
+}
+.show img{
+    width: 250px;
+    height: 250px;
+}
+
+.lightbox .lb-image{
+    max-width: 960px;
+}
+
+.paragraph{
+    line-height: 23px;
+    margin-bottom: 15px;
+    clear: both;
+    display: inline-block;
+}
+
+#replies{
+    font-style: italic;
+    height: 617px;
+    background: url(../images/city2.jpg) center top no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding: 44px 0;
+}
+#replies .name{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#replies .more{
+    font-family: 'Lobster';
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 18px;
+    padding-left: 24px;
+    background: url("../images/more.png") no-repeat;
+    display: inline-block;
+    color: #151515;
+}
+#replies .inner .reply{
+    width: 648px;
+    display: inline-block;
+    margin: auto;
+    text-align: left;
+    background: rgba(255, 255, 255, .87);
+    padding: 20px;
+    border-radius: 104px;
+    margin-bottom: 44px;
+}
+#replies .reply .image{
+    border-radius: 84px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.more-replies{
+    background: url(../images/big-more.png) no-repeat;
+    line-height: 53px;
+    font-size: 28px;
+    color: #ffffff;
+    font-family: 'Lobster';
+    padding-left: 64px;
+    display: inline-block;
+}
+
+footer{
+    padding: 34px 0;
+}
+.socials{
+    padding: 8px 0;
+}
+[class^="social-"]{
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    background-image: url(../images/social.png);
+    margin-left: 10px;
+}
+.social-vk{
+    background-position: -52px 0;
+}
+.social-fb{
+    background-position: -104px 0;
+}
+
+.switch{
+    line-height: 32px;
+    height: 32px;
+    width: 120px;
+    display: inline-block;
+}
+.switch.eng{
+    background-image: url(../images/eng-active.png);
+    padding: 0 20px 0 10px;
+}
+.switch.rus{
+    background-image: url(../images/rus-active.png);
+    padding: 0 10px 0 20px;
+}
+.switch a{
+    margin: 0 5px;
+    line-height: 27px;
+}
+nav{
+    text-align: center;
+}
+
+#main-menu li:after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 34px;
+    height: 13px;
+    background-image: url(../images/active-main-menu.png);
+    left: 50%;
+    bottom: -5px;
+    margin-left: -17px;
+    opacity: 0;
+}
+#main-menu.active- li:nth-child(1):after,
+#main-menu.active-visas li:nth-child(2):after,
+#main-menu.active-immigration li:nth-child(3):after,
+#main-menu.active-contacts li:nth-child(4):after
+{
+    opacity: 1;
+}

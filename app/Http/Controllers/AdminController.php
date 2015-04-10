@@ -35,7 +35,7 @@ class AdminController extends BaseController {
 
         if ($login == 'admin' && $password == '123123') {
             Session::put('admin', true);
-            return Redirect::to('/admin/index');
+            return Redirect::to('/admin/comments');
         } else {
             return Redirect::back();
         }

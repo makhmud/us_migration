@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
@@ -16,12 +17,28 @@ use Intervention\Image\Facades\Image;
 class AdminController extends BaseController {
 
     public function __construct(){
-
+        $this->middleware('auth', ['except' => ['getLogin', 'postLogin']]);
     }
 
     public function getIndex()
     {
         return view('admin.index', []);
+    }
+
+    public function getLogin(){
+        return view('admin.login', []);
+    }
+
+    public function postLogin() {
+        $login = Input::get('login');
+        $password = Input::get('password');
+
+        if ($login == 'admin' && $password == '123123') {
+            Session::put('admin', true);
+            return Redirect::to('/admin/index');
+        } else {
+            return Redirect::back();
+        }
     }
 
     public function getComments() {

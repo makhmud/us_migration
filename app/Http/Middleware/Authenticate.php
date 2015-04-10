@@ -2,6 +2,8 @@
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class Authenticate {
 
@@ -32,17 +34,21 @@ class Authenticate {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($this->auth->guest())
-		{
-			if ($request->ajax())
-			{
-				return response('Unauthorized.', 401);
-			}
-			else
-			{
-				return redirect()->guest('auth/login');
-			}
-		}
+//		if ($this->auth->guest())
+//		{
+//			if ($request->ajax())
+//			{
+//				return response('Unauthorized.', 401);
+//			}
+//			else
+//			{
+//				return redirect()->guest('auth/login');
+//			}
+//		}
+
+        if (!Session::get('admin')) {
+            return Redirect::to('/admin/login');
+        }
 
 		return $next($request);
 	}

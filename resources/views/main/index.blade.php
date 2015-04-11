@@ -26,7 +26,7 @@
                 <img src="/images/city1.jpg" alt=""/>
                 <a rel="lightbox[gallery]" href="/images/city1.jpg">{{trans('texts.view')}}</a>
             </div>
-            {{$part3->content}}
+            {{{$part3->content}}}
         </div>
     </article>
     </div>

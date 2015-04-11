@@ -14,6 +14,11 @@ class MainController extends Controller {
         View::share('comments', Comment::all());
         View::share('email', strip_tags(Text::where('key', '=', 'email')->first()->content));
         View::share('skype', strip_tags(Text::where('key', '=', 'skype')->first()->content));
+        View::share('links', [
+            'fb' => strip_tags(Text::where('key', '=', 'fb')->first()->content),
+            'vk' => strip_tags(Text::where('key', '=', 'vk')->first()->content),
+            'twitter' => strip_tags(Text::where('key', '=', 'twitter')->first()->content),
+        ]);
     }
 
     public function getIndex()

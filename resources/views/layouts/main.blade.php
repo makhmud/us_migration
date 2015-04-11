@@ -49,8 +49,10 @@
             Перепечатывание и использование материалов в электронном <br/> формате разрешается
             только при наличии гиперссылки на <br/> us-immigration.ua(пример)</p>
 
-        <div class="socials pull-right"><a class="social-tw" href="#"></a><a class="social-vk" href="#"></a><a
-                    class="social-fb" href="#"></a></div>
+        <div class="socials pull-right">
+            <a class="social-tw" href="{{$links['twitter']}}"></a>
+            <a class="social-vk" href="{{$links['vk']}}"></a>
+            <a class="social-fb" href="{{$links['fb']}}"></a></div>
     </div>
 </footer>
 </body>

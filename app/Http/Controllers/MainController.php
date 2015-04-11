@@ -12,7 +12,7 @@ class MainController extends Controller {
 
     public function __construct(){
         View::share('comments', Comment::all());
-        View::share('email', Text::where('key', '=', 'email')->first());
+        View::share('email', Text::where('key', '=', 'email')->first()->content);
     }
 
     public function getIndex()

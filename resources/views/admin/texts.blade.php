@@ -21,15 +21,24 @@
         <?php var_dump($texts); ?>
     </pre>
 
-    {{--@foreach($texts as $text)--}}
-        {{--<form class="form" action="/admin/comments" method="POST" enctype="multipart/form-data" >--}}
-            {{--<input type="hidden" name="id" value="{{$text->id}}"/>--}}
-            {{--<div>{{$text->key}}}</div>--}}
-            {{--<div class="form-group">--}}
-                {{--<textarea name="content" class="form-control" id="" cols="30" rows="10">{{$text->content}}}</textarea>--}}
-            {{--</div>--}}
-            {{--<div class="form-group"><input type="submit" name="save" class="btn btn-success" value="Save"/></div>--}}
-        {{--</form>--}}
-    {{--@endforeach--}}
+    @foreach($texts as $text)
+        <div class="row">
+            <form class="form col-md-6" action="/admin/texts" method="POST" enctype="multipart/form-data" >
+                <input type="hidden" name="id" value="{{$text['ru']['id']}}"/>
+                <div class="form-group">
+                    <textarea name="content" class="form-control" id="" cols="30" rows="10">{{$text['ru']['content']}}}</textarea>
+                </div>
+                <div class="form-group"><input type="submit" name="save" class="btn btn-success" value="Save"/></div>
+            </form>
+            <form class="form col-md-6" action="/admin/texts" method="POST" enctype="multipart/form-data" >
+                <input type="hidden" name="id" value="{{$text['en']['id']}}"/>
+                <div class="form-group">
+                    <textarea name="content" class="form-control" id="" cols="30" rows="10">{{$text['en']['content']}}}</textarea>
+                </div>
+                <div class="form-group"><input type="submit" name="save" class="btn btn-success" value="Save"/></div>
+            </form>
+        </div>
+
+    @endforeach
 
 @stop

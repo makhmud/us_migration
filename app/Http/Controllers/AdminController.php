@@ -82,6 +82,7 @@ class AdminController extends BaseController {
 
         foreach($texts as $text){
             $outputTexts[$text['key']][$text['lang']]['content'] = $text['content'];
+            $outputTexts[$text['key']][$text['lang']]['id'] = $text['id'];
         }
 
         return view('admin.texts', ['texts'=>$outputTexts]);

@@ -92,6 +92,8 @@ class AdminController extends BaseController {
             $text->save();
 
         }
+
+        return Redirect::back();
     }
 
 }

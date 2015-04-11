@@ -12,16 +12,16 @@ class MainController extends Controller {
 
     public function __construct(){
         View::share('comments', Comment::all());
-        View::share('email', Text::where('key', '=', 'email')->get());
+        View::share('email', Text::where('key', '=', 'email')->first());
     }
 
     public function getIndex()
     {
 
         return view('main.index', [
-            'part1' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'about1')->get(),
-            'part2' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'about2')->get(),
-            'part3' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'about3')->get()
+            'part1' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'about1')->first(),
+            'part2' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'about2')->first(),
+            'part3' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'about3')->first()
         ]);
     }
 

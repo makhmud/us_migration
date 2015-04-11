@@ -17,22 +17,21 @@
         <div class="form-group"><input type="submit" name="new" class="btn btn-success" value="Add"/></div>
     </form>
 
-    <pre>
-        <?php var_dump($texts); ?>
-    </pre>
-
     @foreach($texts as $key => $text)
         <div class="label">{{$key}}</div>
         <div class="row">
-            <form class="form col-md-6" action="/admin/texts" method="POST" enctype="multipart/form-data" >
-                <div class="label">RU</div>
-                <input type="hidden" name="id" value="{{$text['ru']['id']}}"/>
+            @if (isset($text['ru']))
+                <form class="form col-md-6" action="/admin/texts" method="POST" enctype="multipart/form-data" >
+                    <div class="label">RU</div>
+                    <input type="hidden" name="id" value="{{$text['ru']['id']}}"/>
 
-                <div class="form-group">
-                    <textarea name="content" class="ckeditor" id="" cols="30" rows="10">{{$text['ru']['content']}}</textarea>
-                </div>
-                <div class="form-group"><input type="submit" name="save" class="btn btn-success" value="Save"/></div>
-            </form>
+                    <div class="form-group">
+                        <textarea name="content" class="ckeditor" id="" cols="30" rows="10">{{$text['ru']['content']}}</textarea>
+                    </div>
+                    <div class="form-group"><input type="submit" name="save" class="btn btn-success" value="Save"/></div>
+                </form>
+            @endif
+            @if (isset($text['en']))
             <form class="form col-md-6" action="/admin/texts" method="POST" enctype="multipart/form-data" >
                 <div class="label">EN</div>
                 <input type="hidden" name="id" value="{{$text['en']['id']}}"/>
@@ -41,6 +40,7 @@
                 </div>
                 <div class="form-group"><input type="submit" name="save" class="btn btn-success" value="Save"/></div>
             </form>
+            @endif
         </div>
 
     @endforeach

@@ -3,19 +3,19 @@
 
 @section('content')
 
-    <form class="form" action="/admin/texts" method="POST" enctype="multipart/form-data" >
-        <div class="form-group"><input class="form-control" type="text" name="key"/></div>
-        <div class="form-group"><input class="form-control" type="text" name="title"/></div>
-        <div class="form-group"><select class="form-control" name="lang" id="">
-                <option value="en">en</option>
-                <option value="ru">ru</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <textarea name="content" class="ckeditor" class="form-control" id="" cols="30" rows="10"></textarea>
-        </div>
-        <div class="form-group"><input type="submit" name="new" class="btn btn-success" value="Add"/></div>
-    </form>
+    {{--<form class="form" action="/admin/texts" method="POST" enctype="multipart/form-data" >--}}
+        {{--<div class="form-group"><input class="form-control" type="text" name="key"/></div>--}}
+        {{--<div class="form-group"><input class="form-control" type="text" name="title"/></div>--}}
+        {{--<div class="form-group"><select class="form-control" name="lang" id="">--}}
+                {{--<option value="en">en</option>--}}
+                {{--<option value="ru">ru</option>--}}
+            {{--</select>--}}
+        {{--</div>--}}
+        {{--<div class="form-group">--}}
+            {{--<textarea name="content" class="ckeditor" class="form-control" id="" cols="30" rows="10"></textarea>--}}
+        {{--</div>--}}
+        {{--<div class="form-group"><input type="submit" name="new" class="btn btn-success" value="Add"/></div>--}}
+    {{--</form>--}}
 
     @foreach($texts as $key => $text)
         <div>{{$key}}</div>

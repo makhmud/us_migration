@@ -12,8 +12,8 @@ class MainController extends Controller {
 
     public function __construct(){
         View::share('comments', Comment::all());
-        View::share('email', Text::where('key', '=', 'email')->first()->content);
-        View::share('skype', Text::where('key', '=', 'skype')->first()->content);
+        View::share('email', strip_tags(Text::where('key', '=', 'email')->first()->content));
+        View::share('skype', strip_tags(Text::where('key', '=', 'skype')->first()->content));
     }
 
     public function getIndex()

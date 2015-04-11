@@ -12,9 +12,6 @@
 </head>
 <body>
 <header class="container">
-    <pre>
-        <?php var_dump($email) ?>
-    </pre>
     <div class="inner">
         <div id="top">
             <div id="lang">

@@ -4,9 +4,9 @@
 @section('content')
 
     <form class="form" action="/admin/texts" method="POST" enctype="multipart/form-data" >
-        <div class="form-control"><input type="text" name="key"/></div>
-        <div class="form-control"><input type="text" name="title"/></div>
-        <div class="form-control"><select name="lang" id="">
+        <div class="form-control"><input class="form-control" type="text" name="key"/></div>
+        <div class="form-control"><input class="form-control" type="text" name="title"/></div>
+        <div class="form-control"><select class="form-control" name="lang" id="">
                 <option value="en">en</option>
                 <option value="ru">ru</option>
             </select>

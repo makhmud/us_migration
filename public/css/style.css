@@ -203,6 +203,9 @@ ul{
     padding-left: 64px;
     display: inline-block;
 }
+.more-replies:hover{
+    color: #ffffff;
+}
 
 footer{
     padding: 34px 0;

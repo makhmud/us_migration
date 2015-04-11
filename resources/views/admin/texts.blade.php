@@ -18,7 +18,7 @@
     {{--</form>--}}
 
     @foreach($texts as $key => $text)
-        <div>{{$key}}</div>
+        <h2>{{$key}}</h2>
         <div class="row">
             @if (isset($text['ru']))
                 <form class="form col-md-6" action="/admin/texts" method="POST" enctype="multipart/form-data" >

@@ -6,11 +6,13 @@ use App\Comment;
 use App\Http\Controllers\Controller;
 use App\Text;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\View;
 
 class MainController extends Controller {
 
     public function __construct(){
+        Cache::flush();
         View::share('comments', Comment::all());
         View::share('email', strip_tags(Text::where('key', '=', 'email')->first()->content));
         View::share('skype', strip_tags(Text::where('key', '=', 'skype')->first()->content));

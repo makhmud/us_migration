@@ -17,7 +17,12 @@ class MainController extends Controller {
 
     public function getIndex()
     {
-        return view('main.index', []);
+
+        return view('main.index', [
+            'part1' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'about1')->get(),
+            'part2' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'about2')->get(),
+            'part3' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'about3')->get()
+        ]);
     }
 
     public function getVisas() {

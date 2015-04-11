@@ -18,11 +18,11 @@
     </form>
 
     @foreach($texts as $key => $text)
-        <div class="label">{{$key}}</div>
+        <div>{{$key}}</div>
         <div class="row">
             @if (isset($text['ru']))
                 <form class="form col-md-6" action="/admin/texts" method="POST" enctype="multipart/form-data" >
-                    <div class="label">RU</div>
+                    <div>RU</div>
                     <input type="hidden" name="id" value="{{$text['ru']['id']}}"/>
 
                     <div class="form-group">
@@ -33,7 +33,7 @@
             @endif
             @if (isset($text['en']))
             <form class="form col-md-6" action="/admin/texts" method="POST" enctype="multipart/form-data" >
-                <div class="label">EN</div>
+                <div>EN</div>
                 <input type="hidden" name="id" value="{{$text['en']['id']}}"/>
                 <div class="form-group">
                     <textarea name="content" class="ckeditor" id="" cols="30" rows="10">{{$text['en']['content']}}</textarea>

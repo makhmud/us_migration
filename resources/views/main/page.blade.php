@@ -3,7 +3,7 @@
     <div class="container">
         <div class="inner">
             <h1>{{$page->title}}</h1>
-            {{$page->content}}
+            {!!$page->content!!}
         </div>
     </div>
 

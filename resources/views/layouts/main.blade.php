@@ -45,9 +45,10 @@
 @include('main.replies')
 <footer class="container">
     <div class="inner">
-        <p class="pull-left">© 2015 - us-immigration.ua <br/>
-            Перепечатывание и использование материалов в электронном <br/> формате разрешается
-            только при наличии гиперссылки на <br/> us-immigration.ua(пример)</p>
+        {{--<p class="pull-left">© 2015 - us-immigration.ua <br/>--}}
+            {{--Перепечатывание и использование материалов в электронном <br/> формате разрешается--}}
+            {{--только при наличии гиперссылки на <br/> us-immigration.ua(пример)</p>--}}
+        {!!$footer!!}
 
         <div class="socials pull-right">
             <a class="social-tw" href="{{$links['twitter']}}"></a>

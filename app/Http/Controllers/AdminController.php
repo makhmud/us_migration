@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use App\Http\Controllers\Controller;
+use App\Text;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Input;
@@ -64,13 +65,33 @@ class AdminController extends BaseController {
             $comment->save();
         } elseif (Input::has('delete')) {
             $comment->delete();
+        } elseif (Input::has('new')){
+            $comment = new Comment();
+            $comment->name = Input::get('name');
+            $comment->content = Input::get('content');
+            $comment->save();
         }
 
         return Redirect::back();
     }
 
     public function getTexts() {
+        return view('admin.texts', []);
+    }
 
+    public function postTexts(){
+        if( Input::has('save') ){
+
+        } elseif( Input::has('new') ){
+            $text = new Text();
+            $text->key = Input::get('key');
+            $text->content = Input::get('content');
+            $text->title = Input::get('title');
+            $text->lang = Input::get('lang');
+            $text->url = '.';
+            $text->save();
+
+        }
     }
 
 }

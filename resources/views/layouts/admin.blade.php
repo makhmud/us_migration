@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/bootstrap.css"/>
     <link rel="stylesheet" href="/css/lightbox.css"/>
     <script src="/js/jquery-1.11.2.min.js"></script>
+    <script src="/js/ckeditor/ckeditor.js"></script>
     <script src="/js/main.js"></script>
 </head>
 <body>

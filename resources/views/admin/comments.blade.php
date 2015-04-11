@@ -3,6 +3,16 @@
 
 @section('content')
 
+    <form class="form" action="/admin/comments" method="POST" enctype="multipart/form-data" >
+        <input type="hidden" name="id" value="0"/>
+        <div class="form-group"><input type="file" name="image"/></div>
+        <div class="form-group"><input class="form-control" required="required" name="name" type="text" value=""/></div>
+        <div class="form-group">
+            <textarea name="content" required="required" id="" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <div class="form-group"><input type="submit" name="new" class="btn btn-success" value="New"/></div>
+    </form>
+
 @foreach($comments as $comment)
     <form class="form" action="/admin/comments" method="POST" enctype="multipart/form-data" >
         <input type="hidden" name="id" value="{{$comment->id}}"/>

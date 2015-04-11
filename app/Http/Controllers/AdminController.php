@@ -76,7 +76,15 @@ class AdminController extends BaseController {
     }
 
     public function getTexts() {
-        return view('admin.texts', []);
+        $texts = Text::all()->toArray();
+
+        $outputTexts = [];
+
+        foreach($texts as $text){
+            $outputTexts[$text->key][$text->lang]['content'] = $text->content;
+        }
+
+        return view('admin.texts', ['texts'=>$outputTexts]);
     }
 
     public function postTexts(){

@@ -17,6 +17,10 @@
         <div class="form-group"><input type="submit" name="new" class="btn btn-success" value="Add"/></div>
     </form>
 
+    <pre>
+        <?php var_dump($texts); ?>
+    </pre>
+
     {{--@foreach($texts as $text)--}}
         {{--<form class="form" action="/admin/comments" method="POST" enctype="multipart/form-data" >--}}
             {{--<input type="hidden" name="id" value="{{$text->id}}"/>--}}

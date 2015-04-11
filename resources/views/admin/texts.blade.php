@@ -24,7 +24,7 @@
                 <form class="form col-md-6" action="/admin/texts" method="POST" enctype="multipart/form-data" >
                     <div>RU</div>
                     <input type="hidden" name="id" value="{{$text['ru']['id']}}"/>
-
+                    <div class="form-group"><input class="form-control" type="text" name="title" value="{{$text['ru']['title']}}"/></div>
                     <div class="form-group">
                         <textarea name="content" class="ckeditor" id="" cols="30" rows="10">{{$text['ru']['content']}}</textarea>
                     </div>
@@ -35,6 +35,7 @@
             <form class="form col-md-6" action="/admin/texts" method="POST" enctype="multipart/form-data" >
                 <div>EN</div>
                 <input type="hidden" name="id" value="{{$text['en']['id']}}"/>
+                <div class="form-group"><input class="form-control" type="text" name="title" value="{{$text['en']['title']}}"/></div>
                 <div class="form-group">
                     <textarea name="content" class="ckeditor" id="" cols="30" rows="10">{{$text['en']['content']}}</textarea>
                 </div>

@@ -83,6 +83,7 @@ class AdminController extends BaseController {
         foreach($texts as $text){
             $outputTexts[$text['key']][$text['lang']]['content'] = $text['content'];
             $outputTexts[$text['key']][$text['lang']]['id'] = $text['id'];
+            $outputTexts[$text['key']][$text['lang']]['title'] = $text['title'];
         }
 
         return view('admin.texts', ['texts'=>$outputTexts]);
@@ -90,6 +91,10 @@ class AdminController extends BaseController {
 
     public function postTexts(){
         if( Input::has('save') ){
+            $text = Text::find(Input::get('id'));
+            $text->title = Input::get('title');
+            $text->content= Input::get('content');
+            $text->save();
 
         } elseif( Input::has('new') ){
             $text = new Text();

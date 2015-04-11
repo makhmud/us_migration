@@ -14,7 +14,7 @@ class MainController extends Controller {
     public function __construct(){
         Cache::flush();
         View::share('comments', Comment::all());
-        View::share('footer', Text::where('key', '=', 'footer')->first()->content);
+        View::share('footer', Text::where('key', '=', 'footer')->where('lang', '=', \App::getLocale())->first()->content);
         View::share('email', strip_tags(Text::where('key', '=', 'email')->first()->content));
         View::share('skype', strip_tags(Text::where('key', '=', 'skype')->first()->content));
         View::share('links', [

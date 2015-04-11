@@ -13,6 +13,7 @@ class MainController extends Controller {
     public function __construct(){
         View::share('comments', Comment::all());
         View::share('email', Text::where('key', '=', 'email')->first()->content);
+        View::share('skype', Text::where('key', '=', 'skype')->first()->content);
     }
 
     public function getIndex()
@@ -26,15 +27,15 @@ class MainController extends Controller {
     }
 
     public function getVisas() {
-        return view('main.noText', []);
+        return view('main.page', ['page' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'visas')->first(),]);
     }
 
     public function getImmigration() {
-        return view('main.noText', []);
+        return view('main.page', ['page' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'immigration')->first(),]);
     }
 
     public function getContacts() {
-        return view('main.noText', []);
+        return view('main.page', ['page' => Text::where('lang', '=', \App::getLocale())->where('key', '=', 'contacts')->first(),]);
     }
 
 }

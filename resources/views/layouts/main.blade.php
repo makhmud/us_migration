@@ -25,9 +25,9 @@
                 "><a href="/ru">рус</a><a href="/en">eng</a></span>
             </div>
             <div id="contacts">
-                <div class="mail">textmail@test.com</div>
+                <div class="mail">{{$email}}</div>
                 <br/>
-                <div class="skype">testskype334</div>
+                <div class="skype">{{$skype}}</div>
             </div>
         </div>
         <div id="logo"><img src="/images/logo.png" alt=""/></div>

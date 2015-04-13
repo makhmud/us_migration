@@ -35,14 +35,16 @@
 </header>
 <nav>
     <ul id="main-menu" class="active-{{\Request::segment(2)}}">
-        <li><a href="/{{\App::getLocale()}}">{{trans('menu.about')}}</a></li>
-        <li><a href="/{{\App::getLocale()}}/visas">{{trans('menu.visas')}}</a></li>
-        <li><a href="/{{\App::getLocale()}}/immigration">{{trans('menu.immigration')}}</a></li>
-        <li><a href="/{{\App::getLocale()}}/contacts">{{trans('menu.contacts')}}</a></li>
+        <li><a href="/{{\App::getLocale()}}#main-text">{{trans('menu.about')}}</a></li>
+        <li><a href="/{{\App::getLocale()}}/visas#main-text">{{trans('menu.visas')}}</a></li>
+        <li><a href="/{{\App::getLocale()}}/immigration#main-text">{{trans('menu.immigration')}}</a></li>
+        <li><a href="/{{\App::getLocale()}}/contacts#main-text">{{trans('menu.contacts')}}</a></li>
     </ul>
 </nav>
+<div id="main-text">
     @yield('content')
-@include('main.replies')
+    @include('main.replies')
+</div>
 <footer class="container">
     <div class="inner">
         {{--<p class="pull-left">© 2015 - us-immigration.ua <br/>--}}

@@ -22,7 +22,7 @@
                     @else
                         rus
                     @endif
-                "><a href="/ru">рус</a><a href="/en">eng</a></span>
+                "><a href="/ru/{{\Request::segment(2)}}">рус</a><a href="/en/{{\Request::segment(2)}}">eng</a></span>
             </div>
             <div id="contacts">
                 <div class="mail">{{$email}}</div>

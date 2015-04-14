@@ -100,6 +100,10 @@ ul{
     border-radius: 125px;
     overflow: hidden;
     position: relative;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    text-align: center;
 }
 .show a{
     transition: opacity 100ms linear;
@@ -127,8 +131,12 @@ ul{
     margin-left: 34px;
 }
 .show img{
-    width: 250px;
-    height: 250px;
+    width: 260px;
+    height: 260px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -5px;
+    margin-left: -5px;
 }
 
 .lightbox .lb-image{
